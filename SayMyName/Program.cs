@@ -18,15 +18,17 @@ namespace SayMyName
             do
             {
                
-                Console.WriteLine("Please write your name:");
-                Console.WriteLine("Enter \"Q\" to quit.");
+                Console.Write("Please write your name:");
+                Console.Write("Enter \"Q\" to quit.");
                  Userinput = Console.ReadLine();
                 
                             
 
                 if (Userinput == "q" || Userinput == "Q")
                 {
+                    Console.WriteLine("Have a nice day!!");
                     isvalid= true;
+
                 }
 
                 
@@ -36,20 +38,20 @@ namespace SayMyName
                     switch (Userinput)
                     {
                         case "Joe":
-                            Console.WriteLine($"Hello {Userinput}!!!!");
+                            Console.WriteLine($"Hello {Userinput}, do you want to revisit your last search?");
+                            if (Userinput == "yes")
+                            {
+                                Console.WriteLine("Your last search was: How do you make pickles ");
+                            }
                             break;
                         case "Emily":
-                            Console.WriteLine($"Hello {Userinput}!!!!");
+                            Console.WriteLine($"Hello {Userinput}, how are you?");
+                            
                             break;
                         case "Sturm Savage":
-                            Console.WriteLine($"Hello {Userinput}. How can I help you?");
+                            Console.WriteLine($" {Userinput} is a special needs case.");
                             break;
-                        case "q":
-                            isvalid = true;
-                            break;
-                        case "Q":
-                            isvalid= true;
-                            break;
+                        
 
 
 
