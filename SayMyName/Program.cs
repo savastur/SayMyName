@@ -12,64 +12,62 @@ namespace SayMyName
     {
         static void Main(string[] args)
         {
-            String Userinput;
-            bool isvalid = false;
+            String userInput;
+            bool isValid = false;
+            
 
             do
             {
                
-                Console.Write("Please write your name:");
-                Console.Write("Enter \"Q\" to quit.");
-                 Userinput = Console.ReadLine();
+                Console.WriteLine("Please write your name:");
+                Console.WriteLine("Enter \"Q\" to quit.");
+                 userInput = Console.ReadLine();
                 
                             
-
-                if (Userinput == "q" || Userinput == "Q")
+                //End loop
+                if (userInput == "q" || userInput == "Q")
                 {
                     Console.WriteLine("Have a nice day!!");
-                    isvalid= true;
+                    isValid= true;
 
                 }
-
-                
-
+                //Name Repository                
                 else
                 {
-                    switch (Userinput)
+                                                                                        
+                    switch (userInput)
                     {
                         case "Joe":
-                            Console.WriteLine($"Hello {Userinput}, do you want to revisit your last search?");
-                            if (Userinput == "yes")
+                            Console.WriteLine($"Hello {userInput}, do you want to revisit your last search?");
+                            if (userInput == "yes")
                             {
                                 Console.WriteLine("Your last search was: How do you make pickles ");
                             }
                             break;
                         case "Emily":
-                            Console.WriteLine($"Hello {Userinput}, how are you?");
+                            Console.WriteLine($"Hello {userInput}, how are you?");
                             
                             break;
                         case "Sturm Savage":
-                            Console.WriteLine($" {Userinput} is a special needs case.");
+                            Console.WriteLine($" {userInput} is a special needs case.");
                             break;
-                        
-
-
-
+                                                 
                     }
-                    if (Userinput != "Joe , Emily , Sturm Savage")
+                                                            
+                    //Any other name
+                    if (userInput != "Joe , Emily , Sturm Savage")
                     {
-                        Console.WriteLine($"Hello {Userinput}!!!!");
+                        Console.WriteLine($"Hello {userInput}!!!!");
 
                     }
 
                 }
             
             } 
-            while (!isvalid);
+            while (!isValid);
             
             
-
-
+            //Pause
             Console.Read();
         }
     }
